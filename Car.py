@@ -17,4 +17,4 @@ class Car:
 
 
     def debug(self):
-        print(str("Car Paths Remaining -- " + self.pathRemaining ))
+        print(str("Car Paths Remaining -- " + str(self.pathRemaining) ))

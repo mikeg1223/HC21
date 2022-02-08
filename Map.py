@@ -46,7 +46,6 @@ class Map:
         for s in range(self.num_streets):
             st = Street( streetLines[s], s )
             self.streets[st.name] = st   #hashmap of its name --> this class instance
-            self.intersections[st.startIntersectionId].debug()
             self.intersections[st.startIntersectionId].addOutgoingStreet(st.name, st.cost)
             self.intersections[st.endIntersectionId].addIncomingStreet(st.name)
 
@@ -58,14 +57,16 @@ class Map:
     
 
     def printEverything(self):
-        for i in self.intersections:
-            i.debug()
-        
         for s in self.streets:
-            s.debug()
+            self.streets[s].debug()
         
         for c in self.cars:
-            c.debug()
+            self.cars[c].debug()
+
+        for i in range(self.num_intersections):
+            self.intersections[str(i)].debug()
+        
+
         
 
     # program runs from below 

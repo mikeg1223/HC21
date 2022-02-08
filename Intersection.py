@@ -31,5 +31,5 @@ class Intersection:
             return self.waitingCars[self.currentLight].pop()
 
     def debug(self):
-        print( str("Intersection " + str(self.intersectionId) + "\n") )
+        print( str("Intersection " + str(self.intersectionId) + "    Outgoing: " + str(self.outgoingStreets)) )
 
