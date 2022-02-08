@@ -6,7 +6,7 @@ class Map:
 
     def __init__(self):
         self.preprocessing("./in/a.txt")
-        self.printEverything()
+        #self.printEverything()
 
     def preprocessing(self, fileName):
         extracted = []
@@ -55,6 +55,7 @@ class Map:
             ca = Car(str(carsLines[c]), c)
             self.cars[c] = ca
     
+
 
     def printEverything(self):
         for s in self.streets:
