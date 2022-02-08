@@ -3,7 +3,6 @@ class Street:
     
     def __init__(self,textLine, id):
         tokens = textLine.split()
-        print(textLine)
         self.streetId = id
         self.startIntersectionId = tokens[0]
         self.endIntersectionId = tokens[1]
